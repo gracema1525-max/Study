@@ -1,0 +1,35 @@
+# Copy to config.yaml and customize.
+feeds:
+  - https://www.semianalysis.com/feed
+  - https://www.anandtech.com/rss/
+  - https://www.tomshardware.com/feeds/all
+  - https://www.eetimes.com/feed/
+  - https://semiengineering.com/feed/
+
+keywords:
+  - semiconductor
+  - chip
+  - foundry
+  - EUV
+  - HBM
+  - TSMC
+  - Samsung
+  - Intel
+  - Nvidia
+  - ASML
+  - wafer
+
+max_items_per_feed: 8
+database_path: data/seen.sqlite3
+request_timeout_seconds: 20
+
+openai:
+  model: gpt-5.4-mini
+
+notion:
+  # Choose exactly one target style.
+  # parent_page_id creates child pages under a page.
+  parent_page_id: ""
+  # database_id creates pages in a database with properties: Name, Source, URL, Published, Tags.
+  database_id: ""
+  version: "2022-06-28"
